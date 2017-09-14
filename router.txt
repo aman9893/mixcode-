@@ -1,0 +1,34 @@
+import { NgModule }    
+
+
+  from '@angular/core';
+import { BrowserModule }
+
+
+ from '@angular/platform-browser';
+
+import { AppComponent }  from './app.component';
+
+import { aboutcomponent }  from './about/about.component';
+import { servicescomponent}  from './service/services.component';
+import { headercomponent }  from './header/app.headercomponent';
+import { footercomponent }  from './footer/footer.component';
+import{navbarcomponent} from './navbar/navbar.component';
+import { RouterModule ,Routes } from '@angular/router';
+
+
+const appRoutes: Routes = [
+  { path: 'about', component: aboutcomponent },
+  { path: 'service', component: servicescomponent },
+];
+
+
+
+@NgModule({
+  imports:      [ BrowserModule , RouterModule.forRoot(appRoutes)],
+  declarations: [ AppComponent ,headercomponent,aboutcomponent,navbarcomponent,servicescomponent,footercomponent],
+  bootstrap:    [ AppComponent ]
+
+
+})
+export class AppModule { }
